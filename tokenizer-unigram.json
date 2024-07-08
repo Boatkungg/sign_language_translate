@@ -1,0 +1,147 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": {
+    "strategy": {
+      "Fixed": 512
+    },
+    "direction": "Right",
+    "pad_to_multiple_of": null,
+    "pad_id": 0,
+    "pad_type_id": 0,
+    "pad_token": "<pad>"
+  },
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<pad>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "</s>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "<unk>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": null,
+  "post_processor": {
+    "type": "TemplateProcessing",
+    "single": [
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "</s>",
+          "type_id": 0
+        }
+      }
+    ],
+    "pair": [
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "B",
+          "type_id": 1
+        }
+      }
+    ],
+    "special_tokens": {
+      "</s>": {
+        "id": "</s>",
+        "ids": [
+          1
+        ],
+        "tokens": [
+          "</s>"
+        ]
+      }
+    }
+  },
+  "decoder": null,
+  "model": {
+    "type": "Unigram",
+    "unk_id": null,
+    "vocab": [
+      [
+        "<pad>",
+        0.0
+      ],
+      [
+        "</s>",
+        0.0
+      ],
+      [
+        "<unk>",
+        0.0
+      ],
+      [
+        "ค",
+        -1.9951080782490744
+      ],
+      [
+        "ั",
+        -1.9951080782490789
+      ],
+      [
+        "ด",
+        -2.4951080782490744
+      ],
+      [
+        "ี",
+        -2.4951080782490744
+      ],
+      [
+        "ร",
+        -2.4951080782490744
+      ],
+      [
+        "บ",
+        -2.495108078249079
+      ],
+      [
+        "ส",
+        -2.495108078249079
+      ],
+      [
+        "ช",
+        -3.495108078249073
+      ],
+      [
+        "โ",
+        -3.495108078249073
+      ],
+      [
+        "ว",
+        -3.4951080782490784
+      ]
+    ],
+    "byte_fallback": false
+  }
+}
